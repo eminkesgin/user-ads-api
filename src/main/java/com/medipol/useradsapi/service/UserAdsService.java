@@ -20,6 +20,5 @@ public class UserAdsService {
 
     public List<UserAds> getUserAds(String userId) {
        return userAdsRepository.findAllByUserId(userId);
-       // return userAdsRepository.findAll();
     }
 }

@@ -1,6 +1,7 @@
 package com.medipol.useradsapi.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,8 +22,18 @@ public class UserAds {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String userId;
+    @JsonProperty("ImageUrl")
     private String imageUrl;
+    @Column(length=10485760)
     private String url;
-    private String iFrame;
+    @Column(length=10485760)
+    private String adUrl;
+  //  private String iFrame;
     private Instant date;
 }
+//     iFrame,
+//             AElement,
+//             AdUrl: AElement.href,
+//             ImageUrl,
+//             userId,
+//             url
