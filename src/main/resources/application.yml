@@ -10,10 +10,10 @@ spring:
       max-request-size: 1MB
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-63-32-248-14.eu-west-1.compute.amazonaws.com/d8o888eqo63nrg
+    url: jdbc:postgresql://ec2-34-247-172-149.eu-west-1.compute.amazonaws.com/d7l17il1mhmhk3
     hikari:
-      username: fbvbmiddckskal
-      password: cc88cd6ed73dd44e2fb0229c4f9e58900ed30573f96a8d761276fe785fcc2e2e
+      username: skpfwyatodzqmc
+      password: fd77f6f64fa594e261c7db8aee31470f0c955a01b5d5590de18027971286c661
   jpa:
     database: POSTGRESQL
     database-platform: org.hibernate.dialect.PostgreSQL95Dialect
