@@ -14,7 +14,7 @@ public class UserAdsService {
     private final UserAdsRepository userAdsRepository;
 
     public void addUserAds(UserAds userAds) {
-        userAds.setDate(Instant.now());
+     //   userAds.setDate(Instant.now());
         userAdsRepository.save(userAds);
     }
 

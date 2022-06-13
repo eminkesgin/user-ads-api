@@ -29,7 +29,7 @@ public class UserAds {
     @Column(length=10485760)
     private String adUrl;
   //  private String iFrame;
-    private Instant date;
+   // private Instant date;
 }
 //     iFrame,
 //             AElement,
