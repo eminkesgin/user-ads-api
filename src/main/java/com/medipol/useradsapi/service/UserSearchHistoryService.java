@@ -5,10 +5,12 @@ import com.medipol.useradsapi.controller.model.UserSearchHistoryResponse;
 import com.medipol.useradsapi.domain.UserSearchHistory;
 import com.medipol.useradsapi.repository.UserSearchHistoryRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,6 +23,7 @@ public class UserSearchHistoryService {
         var searchHistories = repository.findAllByUserId(userId);
         var userSearchHistoryMap = searchHistories
                 .stream()
+                .filter(userSearchHistory -> Objects.nonNull(userSearchHistory) && StringUtils.isNoneEmpty( userSearchHistory.getSearchText()))
                 .collect(Collectors.groupingBy(
                         UserSearchHistory::getSearchText,
                         Collectors.mapping(
