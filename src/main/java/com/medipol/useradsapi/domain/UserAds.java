@@ -28,12 +28,5 @@ public class UserAds {
     private String url;
     @Column(length=10485760)
     private String adUrl;
-  //  private String iFrame;
-   // private Instant date;
+
 }
-//     iFrame,
-//             AElement,
-//             AdUrl: AElement.href,
-//             ImageUrl,
-//             userId,
-//             url

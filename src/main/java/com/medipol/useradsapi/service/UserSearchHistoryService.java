@@ -42,7 +42,7 @@ public class UserSearchHistoryService {
     }
 
     public void addUserSearchHistory(UserSearchHistory userSearchHistory) {
-        userSearchHistory.setDate(Instant.now());
+
         repository.save(userSearchHistory);
     }
 }

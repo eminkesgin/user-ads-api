@@ -22,5 +22,5 @@ public class UserSearchHistory {
     private String userId;
     @Column(length=10485760)
     private String searchText;
-    private Instant date;
+    //private Instant date;
 }
